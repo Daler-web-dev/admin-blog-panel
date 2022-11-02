@@ -1,7 +1,8 @@
 import React from "react";
-import { Admin, Resource, EditGuesser } from "react-admin";
+import { Admin, Resource } from "react-admin";
 import restProvider from "ra-data-simple-rest";
 import { UserEdit, UserList, UserCreate } from "./components/User";
+import { TrendEdit, TrendList, TrendCreate } from "./components/Trending";
 import { authProvider } from "./components/authProvider";
 
 const dataProvider = restProvider("http://localhost:3000");
@@ -16,10 +17,10 @@ function App() {
 				create={UserCreate}
 			/>
 			<Resource 
-				name="trendings" 
-				list={UserList} 
-				edit={UserEdit}
-				create={UserCreate}
+				name="trending" 
+				list={TrendList} 
+				edit={TrendEdit}
+				create={TrendCreate}
 			/>
 			<Resource 
 				name="posts" 
